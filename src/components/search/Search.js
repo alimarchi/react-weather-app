@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate";
 import { GEO_API_URL, geoApiOptions } from "../../api";
+import classes from "./Search.module.css";
 
 function Search({ onSearchChange }) {
   const [search, setSearch] = useState(null);
@@ -43,6 +44,7 @@ function Search({ onSearchChange }) {
       onChange={handleOnChange}
       // we use an api to search for cities. The api is called when the user types in the search bar.
       loadOptions={loadOptions}
+      className={classes.search}
     />
   );
 }
