@@ -1,7 +1,12 @@
+:root {
+  --primary: #65b2ed;
+  --white: #fff;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #5ba4dd;
+  background-color: var(--primary);
   font-family: 'Montserrat', sans-serif;
 }
