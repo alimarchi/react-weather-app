@@ -1,3 +1,59 @@
+.main-container {
+  background-color: var(--white);
+  height: 420px;
+}
+
+.blue-container {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: var(--primary);
+  height: 280px;
+  position: relative;
+}
+
+.weather-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+.arrow {
+  color: var(--white);
+}
+
+.new-search {
+  color: var(--white);
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.date {
+  text-align: center;
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+.current-weather {
+  background-color: var(--white);
+  margin: 20px 15px 20px 15px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 25px 14px 1px rgba(122, 122, 122, 0.6);
+  -moz-box-shadow: 0px 25px 14px 1px rgba(122, 122, 122, 0.6);
+  box-shadow: 0px 25px 14px 1px rgba(122, 122, 122, 0.6);
+}
+
 .top {
   display: flex;
   justify-content: space-around;
@@ -7,16 +63,10 @@
 
 .bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  border-radius: 6px;
-  -webkit-box-shadow: 12px 13px 21px -4px rgba(61, 57, 61, 0.7);
-  -moz-box-shadow: 12px 13px 21px -4px rgba(61, 57, 61, 0.7);
-  box-shadow: 12px 13px 21px -4px rgba(61, 57, 61, 0.7);
-  margin: 0 20px 20px;
-  background-color: #3670bc;
-  color: #fff;
-  padding: 5px 15px;
+  color: black;
+  padding: 5px 15px 30px 15px;
 }
 
 .city {
@@ -26,7 +76,7 @@
   letter-spacing: 1px;
   text-align: left;
   margin: 0;
-  color: #fff;
+  color: black;
 }
 
 .temperature {
@@ -36,7 +86,7 @@
   letter-spacing: -5px;
   margin: 2px 0;
   text-align: left;
-  color: #fff;
+  color: black;
 }
 
 .weather-description {
@@ -44,7 +94,7 @@
   font-size: 1.2rem;
   line-height: 1;
   margin: 0;
-  color: #fff;
+  color: black;
   text-align: left;
 }
 
@@ -52,24 +102,21 @@
   width: 150px;
 }
 
-.details {
-  width: 100%;
-}
-
-.parameter-row {
+.parameter-info {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-
-.parameter-label {
-  text-align: left;
-  font-weight: 400;
-  font-size: 1.2rem;
+  flex-direction: column;
 }
 
 .parameter-value {
-  text-align: right;
   font-weight: 600;
   font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.parameter-label {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-top: 2px;
 }
