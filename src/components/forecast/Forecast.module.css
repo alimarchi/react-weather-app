@@ -6,7 +6,7 @@
   margin-top: 0;
   margin-left: 25px;
   margin-right: 25px;
-  padding-top: 15px;
+  padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid black;
 }
@@ -14,6 +14,7 @@
 .forecast-table {
   width: 100%;
   padding: 0 25px;
+  position: relative;
 }
 
 .forecast-info {
@@ -26,4 +27,68 @@
 
 .icon-small {
   width: 40px;
+}
+
+.bottom {
+  background-color: var(--primary);
+  height: 30px;
+  margin: 0;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+/* Tablet devices */
+@media (min-width: 576px) {
+  .forecast-table {
+    padding-bottom: 30px;
+  }
+}
+
+/* Laptop devices */
+@media (min-width: 768px) {
+  
+}
+/* Desktop */
+@media (min-width: 992px) {
+  .forecast-table {
+    padding-bottom: 50px;
+  }
+}
+/* Large devices */
+@media (min-width: 1200px) {
+  .forecast-title {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .forecast-table {
+    padding-left: 150px;
+    padding-right: 100px;
+  }
+}
+
+/* XXL devices */
+@media (min-width: 1400px) {
+  .forecast-title {
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+
+  .forecast-table {
+    padding-left: 250px;
+    padding-right: 200px;
+  }
+}
+
+/* XXXL devices */
+@media (min-width: 2500px) {
+  .forecast-title {
+    margin-left: 850px;
+    margin-right: 850px;
+  }
+
+  .forecast-table {
+    padding-left: 850px;
+    padding-right: 800px;
+  }
 }

@@ -1,14 +1,23 @@
 import { useState } from "react";
-import classes from "./App.module.css";
 import Search from "./components/search/Search";
 import CurrentWeather from "./components/current-weather/CurrentWeather";
 import Forecast from "./components/forecast/Forecast";
-import { WEATHER_API_URL } from "./api";
+
+const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5";
 
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
   const [valid, setValid] = useState(false);
+  const [city, setCity] = useState("");
+
+  const handleNewSearch = () => {
+    setValid(false);
+  };
+
+  const handleNewCity = (inputCity) => {
+    setCity(inputCity);
+  };
 
   const handleOnSearchChange = (searchData) => {
     setValid(true);
@@ -31,16 +40,24 @@ const App = () => {
     }
   };
 
-  console.log(currentWeather);
-  console.log(forecast);
-
   return (
     <>
-      {!valid && <Search onSearchChange={handleOnSearchChange} />}
-      {valid && currentWeather && <CurrentWeather data={currentWeather} />}
-      { valid && forecast && <Forecast data={forecast} />}
+      {!valid && (
+        <Search
+          onSearchChange={handleOnSearchChange}
+          onCityChange={handleNewCity}
+        />
+      )}
+      {valid && currentWeather && (
+        <CurrentWeather
+          data={currentWeather}
+          onNewSearch={handleNewSearch}
+          city={city}
+        />
+      )}
+      {valid && forecast && <Forecast data={forecast} />}
     </>
   );
-}
+};
 
 export default App;

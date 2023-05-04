@@ -47,6 +47,7 @@ const Forecast = ({ data }) => {
           ))}
         </tbody>
       </table>
+      <div className={classes.bottom}></div>
     </div>
   );
 };

@@ -23,10 +23,10 @@
 }
 
 .error {
-    background-color: rgba(255,205,210,1.0);
-    color:rgba(183,28,28,1.0);
-    padding: 5px 10px;
-    border-radius: .3rem;
+  background-color: rgba(255, 205, 210, 1);
+  color: rgba(183, 28, 28, 1);
+  padding: 5px 10px;
+  border-radius: 0.3rem;
 }
 
 .input-container {
@@ -41,7 +41,7 @@
   padding: 10px 5px;
   border: 1px solid black;
   border-radius: 0.3rem;
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .input:focus {
@@ -55,11 +55,33 @@
   color: var(--white);
   font-weight: bold;
   border: 1px solid transparent;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   padding: 10px 20px;
   cursor: pointer;
 }
 
 .search-button:hover {
-    background-color: rgb(6, 108, 234);
+  background-color: rgb(6, 108, 234);
+}
+
+/* Tablet devices */
+@media (min-width: 576px) {
+}
+
+/* Laptop devices */
+@media (min-width: 768px) {
+  .modal {
+    width: 600px;
+    height: 250px;
+  }
+}
+/* Desktop */
+@media (min-width: 992px) {
+}
+/* Large devices */
+@media (min-width: 1200px) {
+}
+
+/* XXL devices */
+@media (min-width: 1400px) {
 }

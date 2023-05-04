@@ -7,7 +7,7 @@ import {
   faDroplet,
 } from "@fortawesome/free-solid-svg-icons";
 
-const CurrentWeather = ({ data }) => {
+const CurrentWeather = ({ data, onNewSearch, city }) => {
   const today = new Date();
   const options = {
     weekday: "long",
@@ -22,7 +22,7 @@ const CurrentWeather = ({ data }) => {
     <div className={classes["main-container"]}>
       <div className={classes["blue-container"]}></div>
       <div className={classes["weather-container"]}>
-        <div className={classes.header}>
+        <div className={classes.header} onClick={() => {onNewSearch()}}>
           <FontAwesomeIcon
             icon={faArrowLeft}
             size="2x"
@@ -41,7 +41,7 @@ const CurrentWeather = ({ data }) => {
               />
             </div>
             <div>
-              <p className={classes.city}>{data.city}</p>
+              <p className={classes.city}>{city}</p>
               <p className={classes.temperature}>
                 {Math.round(data.main.temp)}°C
               </p>
