@@ -21,7 +21,7 @@ function Search({ onSearchChange, onCityChange }) {
       }, 2000);
     } else {
       fetch(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${searchValue}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${searchValue}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
       )
         .then((response) => response.json())
         .then((response) => {
