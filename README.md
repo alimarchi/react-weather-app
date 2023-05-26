@@ -4,6 +4,8 @@
 
 This React weather app is a simple web application built with React and JavaScript. It features a custom CSS design optimized for mobile devices, but also fully responsive for larger screens. With this app, users can easily obtain the current weather conditions and a 7-day forecast for any city. The app leverages various APIs to retrieve weather data and validate city input, ensuring the accuracy and reliability of the information displayed.
 
+App is live [here](https://alimarchi.github.io/react-weather-app/), check it out!
+
 #### Features
 - This weather app is built using React and JavaScript and consists of three main components: Search, CurrentWeather, and Forecast. The logic for displaying each component is located in the App.js file.
 
